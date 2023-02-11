@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link } from "rebass"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <Link
-      to="/"
+      href="/"
       style={{
         fontSize: `var(--font-sm)`,
         textDecoration: `none`,
