@@ -28,15 +28,21 @@ const Header = ({ siteTitle }) => {
       </StyledLink>
 
       <span>
-        <StyledLink>
+        <StyledLink
+          href="/blog"
+        >
           Blog
         </StyledLink>
 
-        <StyledLink>
+        <StyledLink
+          href="/contact"
+        >
           Contact
         </StyledLink>
 
-        <StyledLink>
+        <StyledLink
+          href="/projects"
+        >
           Projects
         </StyledLink>
       </span>
