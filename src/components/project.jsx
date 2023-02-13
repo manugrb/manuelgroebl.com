@@ -7,6 +7,12 @@ const ContainerBox = styled(Box)`
     background: #6644aa;
     padding: 1rem 2rem;
     border-radius: 6px;
+
+    &:hover{
+        box-shadow: 4px 4px 12px 4px #ddd;
+        cursor: pointer;
+    }
+
 `
 
 const TitleLink = styled(Link)`
@@ -14,6 +20,9 @@ const TitleLink = styled(Link)`
     font-weight: 800;
     color: #fff;
     text-decoration: none;
+    ${ContainerBox}:hover & {
+        text-decoration: underline;
+    }
 `
 
 const DescriptionParagraph = styled.p`
