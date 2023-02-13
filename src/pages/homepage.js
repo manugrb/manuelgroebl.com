@@ -10,7 +10,13 @@ const BaseHeader = styled.h1`
     padding-top: 1rem;
     font-family: Roboto;
     font-size: 32px;
-`   
+`
+
+const InfoParagraph = styled.p`
+    color: #444;
+    font-size: 18px;
+    line-height: 1.5;
+`
 
 const HomePage = () => {
 
@@ -22,9 +28,9 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                    <p>I'm a professional full stack developer from germany. I'm really exited about learning new things, especially new technologies that can help me improve my work.</p>
-                    <p>Outside of programming, I'm really intersted in Math and Physics. I love to combine coding with my other interests.</p>
-                    <p>If I'm not coding, I'm likely travelling the world or hiking / skiing around the alps</p>
+                    <InfoParagraph>I'm a professional full stack developer from germany. I'm really exited about learning new things, especially new technologies that can help me improve my work.</InfoParagraph>
+                    <InfoParagraph>Outside of programming, I'm really intersted in Math and Physics. I love to combine coding with my other interests.</InfoParagraph>
+                    <InfoParagraph>If I'm not coding, I'm likely travelling the world or hiking / skiing around the alps</InfoParagraph>
                 </div>
             </div>
 
