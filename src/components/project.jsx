@@ -15,7 +15,10 @@ const ContainerBox = styled(Box)`
 
 `
 
-const TitleLink = styled(Link)`
+const TitleLink = styled.h3`
+    line-height: 32px;
+    padding-bottom: 8px;
+    margin: 0;
     font-size: 24px;
     font-weight: 800;
     color: #fff;
@@ -34,10 +37,14 @@ const DescriptionParagraph = styled.p`
 const Project = (props) => {
 
     return(
-        <ContainerBox>
-            <TitleLink>{props.title}</TitleLink>
-            <DescriptionParagraph>{props.description}</DescriptionParagraph>
-        </ContainerBox>
+        <Link
+        href={props.href}
+        >
+            <ContainerBox>
+                <TitleLink>{props.title}</TitleLink>
+                <DescriptionParagraph>{props.description}</DescriptionParagraph>
+            </ContainerBox>
+        </Link>
     );
 
 }

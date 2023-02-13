@@ -48,7 +48,7 @@ const HomePage = () => {
                 </div>
 
                 <ProjectsDiv>
-                    <Project title={"Solar Display"} description={"A web app, that displays interesting information about your solar system, storing all important values in a database to create helpful long-time statistics"}/>
+                    <Project title={"Solar Display"} description={"A web app, that displays interesting information about your solar system, storing all important values in a database to create helpful long-time statistics"} href="/test"/>
                 </ProjectsDiv>
 
             </div>
