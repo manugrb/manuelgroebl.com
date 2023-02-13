@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../components/header";
 import Layout from "../components/layout";
+import Project from "../components/project";
 
 const BaseHeader = styled.h1`
     color: #222;
@@ -17,6 +18,13 @@ const InfoParagraph = styled.p`
     font-size: 18px;
     line-height: 1.5;
 `
+
+const ProjectsDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
 
 const HomePage = () => {
 
@@ -39,9 +47,9 @@ const HomePage = () => {
                     <BaseHeader>Some Notable Projects</BaseHeader> 
                 </div>
 
-                <div>
-                    <h3>[INSERT PROJECTS HERE]</h3>
-                </div>
+                <ProjectsDiv>
+                    <Project title={"Solar Display"} description={"A web app, that displays interesting information about your solar system, storing all important values in a database to create helpful long-time statistics"}/>
+                </ProjectsDiv>
 
             </div>
 
