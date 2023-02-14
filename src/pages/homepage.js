@@ -38,7 +38,7 @@ const HomePage = () => {
                 <div>
                     <InfoParagraph>I'm a professional full stack developer from germany. I'm really exited about learning new things, especially new technologies that can help me improve my work.</InfoParagraph>
                     <InfoParagraph>Outside of programming, I'm really intersted in Math and Physics. I love to combine coding with my other interests.</InfoParagraph>
-                    <InfoParagraph>If I'm not coding, I'm likely travelling the world or hiking / skiing around the alps</InfoParagraph>
+                    <InfoParagraph>If I'm not coding, I'm likely travelling the world, skiing or hiking around the alps.</InfoParagraph>
                 </div>
             </div>
 
