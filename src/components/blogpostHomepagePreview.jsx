@@ -2,6 +2,10 @@ import * as React from "react"
 import { Box, Link } from "rebass"
 import styled from "styled-components"
 
+const WrapperLink = styled(Link)`
+    text-decoration: none;
+`
+
 const ContainerBox = styled(Box)`
     width: 100%;
     background: inherit;
@@ -42,14 +46,14 @@ const InfoParagraph = styled.p`
 const BlogpostHomepagePreview = (props) => {
 
     return(
-        <Link
+        <WrapperLink
         href={props.href}
         >
             <ContainerBox>
                 <TitleLink>{props.title}</TitleLink>
                 <InfoParagraph>{props.date + "  " + props.views + " views"}</InfoParagraph>
             </ContainerBox>
-        </Link>
+        </WrapperLink>
     );
 
 }
