@@ -5,7 +5,7 @@ import styled from "styled-components"
 const ContainerBox = styled(Box)`
     max-width: 350px;
     background: #6644aa;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     border-radius: 6px;
 
     &:hover{
@@ -19,7 +19,8 @@ const TitleLink = styled.h3`
     line-height: 32px;
     padding-bottom: 8px;
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 800;
     color: #fff;
     text-decoration: none;
@@ -30,7 +31,8 @@ const TitleLink = styled.h3`
 
 const DescriptionParagraph = styled.p`
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
 `
 
