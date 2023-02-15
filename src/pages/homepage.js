@@ -22,6 +22,8 @@ const InfoParagraph = styled.p`
 
 const ProjectsDiv = styled.div`
     display: flex;
+    width: 170%;
+    margin-left: -35%;
     align-items: center;
     justify-content: space-between;
 `
