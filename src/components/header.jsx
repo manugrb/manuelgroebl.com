@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => {
     <StyledHeader>
 
       <StyledLink
-        href="/"
+        href="/homepage"
       >
         Manu Gröbl
       </StyledLink>
