@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BlogpostHomepagePreview from "../components/blogpostHomepagePreview";
 import Header from "../components/header";
 import Layout from "../components/layout";
 import Project from "../components/project";
@@ -57,6 +58,10 @@ const HomePage = () => {
 
                 <div>
                     <BaseHeader>Recent Blog Posts</BaseHeader>
+                </div>
+
+                <div>
+                    <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512}/>
                 </div>
 
             </div>
