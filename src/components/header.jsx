@@ -15,6 +15,10 @@ const StyledLink = styled(Link)`
   font-size: 24px;
   padding: 0 2rem;
   text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
 `
 
 const Header = ({ siteTitle }) => {
