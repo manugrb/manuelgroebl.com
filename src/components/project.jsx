@@ -4,6 +4,9 @@ import styled from "styled-components"
 
 const WrapperLink = styled(Link)`
     text-decoration: none;
+    width: 400px;
+    display: flex;
+    justify-content: center;
 `
 
 const ContainerBox = styled(Box)`

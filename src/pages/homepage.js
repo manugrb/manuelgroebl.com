@@ -22,10 +22,10 @@ const InfoParagraph = styled.p`
 
 const ProjectsDiv = styled.div`
     display: flex;
-    width: 65vw;
-    margin-left: calc(50% - 65vw / 2);
+    width: 100vw;
+    margin-left: calc(50% - 100vw / 2);
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 `
 
 
@@ -51,9 +51,9 @@ const HomePage = () => {
                 </div>
 
                 <ProjectsDiv>
-                    <Project title={"Solar Display"} description={"A web app, that displays interesting information about your solar system, storing all important values in a database to create helpful long-time statistics"} href={"https://github.com/manugrb/alternative-solarmax-display"}/>
-                    <Project title={"Raspberry Pi home server"} description={"A web app, that runs on my Rasberry Pi at home. It can store and display files, that the user can upload. It also displays some intersting information about the Raspberry Pi itself and can control my DIY bluetooth lights in my room"} href={"/whatever"}/>
-                    <Project title={"DIY Bluetooth lights"} description={"A dimmable LED light, that can be controlled with bluetooth. It consists of 5 LED, that can be individually turned on or off / dimmed. I designed the electrical circuit and the code on my own and also soldered everything myself."} href={"/bluetoothLights"}/>
+                    <Project title={"Solar Display"} description={"A web app, that displays everything you need to know about your solar system"} href={"https://github.com/manugrb/alternative-solarmax-display"}/>
+                    <Project title={"Raspberry Pi home server"} description={"A web app for my Raspberry Pi at home to make my life easier"} href={"/whatever"}/>
+                    <Project title={"DIY Bluetooth lights"} description={"A 100% DIY bluetooth controlled dimmable smart LED light for my room"} href={"/bluetoothLights"}/>
                 </ProjectsDiv>
 
             </div>
