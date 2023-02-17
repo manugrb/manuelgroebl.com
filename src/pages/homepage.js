@@ -18,6 +18,7 @@ const InfoParagraph = styled.p`
     color: #444;
     font-size: 18px;
     line-height: 1.5;
+    max-width: none;
 `
 
 const ProjectsDiv = styled.div`
