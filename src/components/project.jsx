@@ -5,6 +5,7 @@ import styled from "styled-components"
 const WrapperLink = styled(Link)`
     text-decoration: none;
     width: 400px;
+    padding: 16px 0px;
     display: flex;
     justify-content: center;
 `
