@@ -22,8 +22,8 @@ const InfoParagraph = styled.p`
 
 const ProjectsDiv = styled.div`
     display: flex;
-    width: 170%;
-    margin-left: -35%;
+    width: 65vw;
+    margin-left: calc(50% - 65vw / 2);
     align-items: center;
     justify-content: space-between;
 `
@@ -40,7 +40,7 @@ const HomePage = () => {
 
                 <div>
                     <InfoParagraph>I'm a professional full stack developer from germany. I started coding over 3.5 years ago and have been working on multiple comercial projects in the last 2 years.</InfoParagraph>
-                    <InfoParagraph>I really enjoy learning new things, especially new technologies that can help me improve my workOutside of programming, I'm really intersted in Math and Physics. I love to combine coding with my other interests.</InfoParagraph>
+                    <InfoParagraph>I really enjoy learning new things, especially new technologies that can help me improve my work. Outside of programming, I'm really intersted in Math and Physics. I love to combine coding with my other interests.</InfoParagraph>
                     <InfoParagraph>If I'm not coding, I'm likely travelling the world, skiing or hiking around the alps.</InfoParagraph>
                 </div>
             </div>
@@ -51,7 +51,9 @@ const HomePage = () => {
                 </div>
 
                 <ProjectsDiv>
-                    <Project title={"Solar Display"} description={"A web app, that displays interesting information about your solar system, storing all important values in a database to create helpful long-time statistics"} href="/test"/>
+                    <Project title={"Solar Display"} description={"A web app, that displays interesting information about your solar system, storing all important values in a database to create helpful long-time statistics"} href={"https://github.com/manugrb/alternative-solarmax-display"}/>
+                    <Project title={"Raspberry Pi home server"} description={"A web app, that runs on my Rasberry Pi at home. It can store and display files, that the user can upload. It also displays some intersting information about the Raspberry Pi itself and can control my DIY bluetooth lights in my room"} href={"/whatever"}/>
+                    <Project title={"DIY Bluetooth lights"} description={"A dimmable LED light, that can be controlled with bluetooth. It consists of 5 LED, that can be individually turned on or off / dimmed. I designed the electrical circuit and the code on my own and also soldered everything myself."} href={"/bluetoothLights"}/>
                 </ProjectsDiv>
 
             </div>
@@ -63,7 +65,7 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                    <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512}/>
+                    <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512} href={'/test'}/>
                 </div>
 
             </div>

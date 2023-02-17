@@ -7,7 +7,7 @@ const WrapperLink = styled(Link)`
 `
 
 const ContainerBox = styled(Box)`
-    max-width: 350px;
+    width: 95%;
     background: #6644aa;
     padding: 2rem 2rem;
     border-radius: 6px;
