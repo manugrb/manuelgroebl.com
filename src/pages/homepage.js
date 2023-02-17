@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import BlogpostHomepagePreview from "../components/blogpostHomepagePreview";
-import Header from "../components/header";
 import Layout from "../components/layout";
 import Project from "../components/project";
 
