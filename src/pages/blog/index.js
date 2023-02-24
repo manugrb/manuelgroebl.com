@@ -72,7 +72,6 @@ const Blog = () => {
                 {blogListData.allMdx.nodes.map(({ frontmatter }) => (
                     <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} views={512} href={"/blog" + frontmatter.slug}/>
                 ))}
-                <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512} href={'/test'}/>
             </BlogpostList>
 
         </Layout>
