@@ -10,6 +10,25 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import styled from "styled-components"
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #f6f7f8;
+  }
+`
+
+const StyledFooter = styled.footer`
+  background: #fff;
+  margin-top: var(--space-5);
+  font-size: var(--font-sm);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,6 +43,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -33,15 +53,10 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Manuel Gröbl
-        </footer>
       </div>
+      <StyledFooter>
+        © {new Date().getFullYear()} &middot; Manuel Gröbl
+      </StyledFooter>
     </>
   )
 }
