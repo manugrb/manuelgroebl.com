@@ -36,6 +36,10 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
