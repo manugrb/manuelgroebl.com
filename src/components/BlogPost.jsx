@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Box } from "rebass"
 import styled from "styled-components"
+import Layout from "../components/layout"
 
 const Wrapper = styled(Box)`
     width: 100%;
@@ -41,17 +42,19 @@ const BlogPost = (props) => {
     const {meta, children} = props;
 
     return (
-        <Wrapper>
-            <PostContainer>
-                <HeadingContainer>
-                    <BlogHeading>{meta.title}</BlogHeading>
-                    <BlogDate>Published {meta.releaseDate}</BlogDate>
-                </HeadingContainer>
+        <Layout>
+            <Wrapper>
+                <PostContainer>
+                    <HeadingContainer>
+                        <BlogHeading>{meta.title}</BlogHeading>
+                        <BlogDate>Published {meta.releaseDate}</BlogDate>
+                    </HeadingContainer>
 
-                {children}
+                    {children}
 
-            </PostContainer>
-        </Wrapper>
+                </PostContainer>
+            </Wrapper>
+        </Layout>
     );
 }
  
