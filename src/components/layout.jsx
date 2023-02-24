@@ -31,20 +31,11 @@ const StyledFooter = styled.footer`
 `
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header scrolled={false} /> {/* TODO: implement some scroll detection here... */}
       <div
         style={{
           margin: `0 auto`,

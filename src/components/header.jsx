@@ -8,6 +8,10 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: ${props => (props.scrolled ? '#fff' : 'inherit')};;
+  position: ${props => (props.scrolled ? 'fixed' : 'relative')};
+  border-bottom: ${props => (props.scrolled ? '1px solid rgba(0, 0, 0, 0.1)' : 'none')};
+  width: 100%;
 `
 
 const StyledLink = styled(Link)`
@@ -21,9 +25,9 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Header = ({ siteTitle }) => {
+const Header = ({ scrolled }) => {
   return(
-    <StyledHeader>
+    <StyledHeader scrolled={scrolled}>
 
       <StyledLink
         href="/homepage"
