@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Layout from "../../components/layout";
 import BlogpostHomepagePreview from "../../components/blogpostHomepagePreview";
 import { Box } from "rebass";
+import { graphql, useStaticQuery } from "gatsby";
 
 const HeadingContainer = styled(Box)`
     display: flex;
@@ -40,6 +41,23 @@ const BlogpostList = styled(Box)`
 `
 
 const Blog = () => {
+
+    
+
+    const blogListData = useStaticQuery(graphql`
+        {
+            allMdx {
+                nodes {
+                    frontmatter {
+                        title
+                        slug
+                        date(formatString: "MMMM DD, YYYY")
+                    }
+                }
+            }
+        }
+    `);
+
     return (
         <Layout>
             <HeadingContainer>
@@ -51,7 +69,9 @@ const Blog = () => {
             </IntroductionContainer>
 
             <BlogpostList>
-                <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512} href={'/test'}/>
+                {blogListData.allMdx.nodes.map(({ frontmatter }) => (
+                    <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} views={512} href={"/blog" + frontmatter.slug}/>
+                ))}
                 <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512} href={'/test'}/>
             </BlogpostList>
 
