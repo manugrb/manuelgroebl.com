@@ -54,6 +54,11 @@ const BackLink = styled(Link)`
 
 `
 
+const MainTextContainer = styled(Box)`
+    text-align: justify;
+    text-justify: inter-word;
+`
+
 const BlogPost = (props) => {
 
     const {meta, children} = props;
@@ -68,7 +73,9 @@ const BlogPost = (props) => {
                         <BlogDate>Published {meta.releaseDate}</BlogDate>
                     </HeadingContainer>
 
-                    {children}
+                    <MainTextContainer>
+                        {children}
+                    </MainTextContainer>
 
                 </PostContainer>
             </Wrapper>
