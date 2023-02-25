@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../../components/layout";
 import BlogpostHomepagePreview from "../../components/blogpostHomepagePreview";
+import BlogPostList from "../../components/BlogPostList";
 import { Box } from "rebass";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -35,23 +36,18 @@ const IntroductionParagraph = styled.p`
     max-width: 100%;
 `
 
-const BlogpostList = styled(Box)`
-    padding: 16px 0 0 0;
-    width: 100%;
-`
-
 const Blog = () => {
 
     
 
     const blogListData = useStaticQuery(graphql`
         {
-            allMdx {
+            allMdx(sort: {frontmatter: {date: DESC}}) {
                 nodes {
                     frontmatter {
                         title
-                        slug
                         date(formatString: "MMMM DD, YYYY")
+                        slug
                     }
                 }
             }
@@ -68,11 +64,11 @@ const Blog = () => {
                 <IntroductionParagraph>Some of my thoughts on all kinds of topics like technologies I work with, travelling tips and experiences or some of my opinions on current issues.</IntroductionParagraph>
             </IntroductionContainer>
 
-            <BlogpostList>
+            <BlogPostList>
                 {blogListData.allMdx.nodes.map(({ frontmatter }) => (
                     <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} views={512} href={"/blog" + frontmatter.slug}/>
                 ))}
-            </BlogpostList>
+            </BlogPostList>
 
         </Layout>
     );
