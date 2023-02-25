@@ -9,7 +9,7 @@ const WrapperLink = styled(Link)`
 const ContainerBox = styled(Box)`
     width: 100%;
     background: inherit;
-    padding: 0 0 2rem 0;
+    padding: 1rem 0 2rem 0;
     border-radius: 0px;
     border: solid;
     border-width: 0 0 2px 0;
