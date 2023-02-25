@@ -4,6 +4,9 @@ import { Box } from "rebass";
 import BlogpostHomepagePreview from "../components/blogpostHomepagePreview";
 import Layout from "../components/layout";
 import Project from "../components/project";
+import BlogPostList from "../components/BlogPostList";
+
+import { graphql, useStaticQuery } from "gatsby";
 
 const BaseHeader = styled.h1`
     color: #222;
@@ -37,6 +40,20 @@ const HomePageContentContainer = styled(Box)`
 
 
 const HomePage = () => {
+
+    const blogListData = useStaticQuery(graphql`
+        {
+            allMdx {
+                nodes {
+                    frontmatter {
+                        title
+                        slug
+                        date(formatString: "MMMM DD, YYYY")
+                    }
+                }
+            }
+        }
+    `);
 
     return(
         
@@ -73,7 +90,11 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <BlogpostHomepagePreview title={"My cool blogpost"} date={"Febuary 15, 2023"} views={512} href={'/test'}/>
+                        <BlogPostList>
+                            {blogListData.allMdx.nodes.map(({ frontmatter }) => (
+                                <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} views={512} href={"/blog" + frontmatter.slug}/>
+                            ))}
+                        </BlogPostList>
                     </div>
 
                 </div>
