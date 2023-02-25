@@ -44,12 +44,13 @@ const HomePage = () => {
     const blogListData = useStaticQuery(graphql`
         {
             allMdx(sort: {frontmatter: {date: DESC}}, limit: 3) {
-            nodes {
-                frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
+                nodes {
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        slug
+                    }
                 }
-            }
             }
         }
     `);

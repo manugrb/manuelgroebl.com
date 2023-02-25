@@ -43,12 +43,13 @@ const Blog = () => {
     const blogListData = useStaticQuery(graphql`
         {
             allMdx(sort: {frontmatter: {date: DESC}}) {
-            nodes {
-                frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
+                nodes {
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        slug
+                    }
                 }
-            }
             }
         }
     `);
