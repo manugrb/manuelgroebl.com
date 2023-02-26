@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import { Box } from "rebass"
+import { Box, Link } from "rebass"
 import styled from "styled-components"
 import { createGlobalStyle } from 'styled-components'
 
@@ -37,6 +37,29 @@ const StyledFooter = styled.footer`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 `
 
+const FooterTextBox = styled(Box)`
+  display: grid;
+  font-size: 16px;
+`
+
+const FooterMiddleSpacer = styled(Box)`
+  width: 10%;
+`
+
+const FooterLinkBox = styled(Box)`
+  display: grid;
+  font-size: 16px;
+`
+
+const FooterLink = styled(Link)`
+  text-decoration: none;
+  color: #444;
+
+  &:hover{
+    text-decoration: underline;
+  }
+`
+
 const Layout = ({ children }) => {
 
   return (
@@ -56,7 +79,13 @@ const Layout = ({ children }) => {
           <main>{children}</main>
         </div>
         <StyledFooter>
-          © {new Date().getFullYear()} &middot; Manuel Gröbl
+          <FooterTextBox>
+            © {new Date().getFullYear()} &middot; Manuel Gröbl
+          </FooterTextBox>
+          <FooterMiddleSpacer/>
+          <FooterLinkBox>
+            <FooterLink href="/privacy">Privacy</FooterLink>
+          </FooterLinkBox>
         </StyledFooter>
       </LayoutWrapper>
     </>
