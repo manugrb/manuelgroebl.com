@@ -85,6 +85,7 @@ const Layout = ({ children }) => {
           <FooterMiddleSpacer/>
           <FooterLinkBox>
             <FooterLink href="/privacy">Privacy</FooterLink>
+            <FooterLink href="https://github.com/manugrb/manuelgroebl.com">View source on GitHub</FooterLink>
           </FooterLinkBox>
         </StyledFooter>
       </LayoutWrapper>
