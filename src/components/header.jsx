@@ -43,9 +43,9 @@ const Header = ({ scrolled }) => {
         </StyledLink>
 
         <StyledLink
-          href="/contact"
+          href="/about"
         >
-          Contact
+          About
         </StyledLink>
 
         <StyledLink
