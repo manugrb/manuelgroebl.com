@@ -56,6 +56,20 @@ const About = () => {
                 <TextParagraph>I am working on creating a database application to store artworks and interesting information about them for a club dedicated to local art. Development started early 2022. I am on this project with abother developer.</TextParagraph>
 
             </Box>
+
+            <Box>
+                <SubHeader>Personal Life</SubHeader>
+                <TextParagraph>Let me tell you a bit about myself!</TextParagraph>
+
+                <SubSubHeader>Education</SubSubHeader>
+                <TextParagraph>I finished German highschool (Gymnasium) in 2022. After that I took a year off to travel the world and work as a software freelancer. I will enroll in university in Fall of 2023.</TextParagraph>
+
+                <SubSubHeader>Interests</SubSubHeader>
+                <TextParagraph>I am interested in many things. Mainly technology, sience, math and travelling. <br/>
+                Obviously i really like programming, but I also like learning new things about computer hardware, as well as electrical engeneering. I believe in open source software and privacy. That's why I am always trying to move the open source community further (for example by spreading the word or developing open source software).<br/>
+                Concerning science, I am mostly interested in physics (especially theoretical physics).<br/>
+                I am also travelling the world right now. I've visited quite a few countries in Europe and Asia. So if you need any travel advice, just hit me up and maybe I can help you out.</TextParagraph>
+            </Box>
         </Layout>
 
     );
