@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box } from "rebass";
+import Project from "../components/project";
 import Layout from "../components/layout";
 
 const BaseHeader = styled.h1`
@@ -33,6 +34,16 @@ const TextParagraph = styled.p`
     text-justify: inter-word;
 `
 
+const ProjectsDiv = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    margin-left: calc(50% - 100vw / 2);
+    align-items: center;
+    justify-content: center;
+
+`
+
 const About = () => {
 
     return (
@@ -46,10 +57,19 @@ const About = () => {
 
             <Box>
                 <SubHeader>Comercial Projects</SubHeader>
+                <ProjectsDiv>
+                    <Project title={"Murnau2Go"} description={"An App for Android, that lets you order food online (click and collect)"} href={"/murnau2go"}/>
+                    <Project title={"Baer und Lilie DB"} description={"A web app for storing data and pictures of historic artworks."} href={"/artworkdb"}/>
+                </ProjectsDiv>
             </Box>
 
             <Box>
                 <SubHeader>Hobby Projects</SubHeader>
+                <ProjectsDiv>
+                    <Project title={"Solar Display"} description={"A web app, that displays everything you need to know about your solar system"} href={"https://github.com/manugrb/alternative-solarmax-display"}/>
+                    <Project title={"Raspberry Pi home server"} description={"A web app for my Raspberry Pi at home to make my life easier"} href={"/raspberyypihomeserver"}/>
+                    <Project title={"DIY Bluetooth lights"} description={"A 100% DIY bluetooth controlled dimmable smart LED light for my room"} href={"/bluetoothLights"}/>
+                </ProjectsDiv>
             </Box>
 
         </Layout>
