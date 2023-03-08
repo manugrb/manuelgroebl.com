@@ -51,7 +51,7 @@ const BlogpostHomepagePreview = (props) => {
         >
             <ContainerBox>
                 <TitleLink>{props.title}</TitleLink>
-                <InfoParagraph>{props.date + "  " + props.views + " views"}</InfoParagraph>
+                <InfoParagraph>{props.date}</InfoParagraph>
             </ContainerBox>
         </WrapperLink>
     );

@@ -92,7 +92,7 @@ const HomePage = () => {
                     <div>
                         <BlogPostList>
                             {blogListData.allMdx.nodes.map(({ frontmatter }) => (
-                                <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} views={512} href={"/blog" + frontmatter.slug}/>
+                                <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} href={"/blog" + frontmatter.slug}/>
                             ))}
                         </BlogPostList>
                     </div>
