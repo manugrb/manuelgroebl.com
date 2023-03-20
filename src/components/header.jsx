@@ -5,13 +5,17 @@ import styled from "styled-components"
 const StyledHeader = styled.header`
   margin: 0 auto;
   padding: var(--space-4) var(--size-gutter);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: ${props => (props.scrolled ? '#fff' : 'inherit')};;
   position: ${props => (props.scrolled ? 'fixed' : 'relative')};
   border-bottom: ${props => (props.scrolled ? '1px solid rgba(0, 0, 0, 0.1)' : 'none')};
   width: 100%;
+`
+
+const HeaderPreview = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
 
 const StyledLink = styled(Link)`
@@ -46,47 +50,57 @@ const HamburgerButton = styled.button`
   }
 `
 
+const MobileDropdownWrapper = styled.div`
+
+`
+
 const Header = ({ scrolled }) => {
   return(
     <StyledHeader scrolled={scrolled}>
 
-      <StyledLink
-        href="/homepage"
-      >
-        Manu Gröbl
-      </StyledLink>
-
-      <DesktopSpan>
-        <StyledLink
-          href="/blog"
-        >
-          Blog
-        </StyledLink>
+      <HeaderPreview>
 
         <StyledLink
-          href="/about"
+          href="/homepage"
         >
-          About
+          Manu Gröbl
         </StyledLink>
 
-        <StyledLink
-          href="/projects"
-        >
-          Projects
-        </StyledLink>
-      </DesktopSpan>
+        <DesktopSpan>
+          <StyledLink
+            href="/blog"
+          >
+            Blog
+          </StyledLink>
 
-      <MobileSpan>
+          <StyledLink
+            href="/about"
+          >
+            About
+          </StyledLink>
 
-        <HamburgerButton>
-          <svg viewBox="0 0 80 60" width="28" height="28">
-              <rect width="80" height="8" rx="8" fill="#666"></rect>
-              <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
-              <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
-          </svg>
-        </HamburgerButton>
+          <StyledLink
+            href="/projects"
+          >
+            Projects
+          </StyledLink>
+        </DesktopSpan>
 
-      </MobileSpan>
+        <MobileSpan>
+
+          <HamburgerButton>
+            <svg viewBox="0 0 80 60" width="28" height="28">
+                <rect width="80" height="8" rx="8" fill="#666"></rect>
+                <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
+                <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
+            </svg>
+          </HamburgerButton>
+
+        </MobileSpan>
+
+      </HeaderPreview>
+
+      <MobileDropdownWrapper></MobileDropdownWrapper>
       
     </StyledHeader>
   );
