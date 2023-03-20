@@ -25,6 +25,27 @@ const StyledLink = styled(Link)`
   }
 `
 
+const DesktopSpan = styled.span`
+  @media screen and (max-width: 750px){
+    display: none;
+  }
+`
+
+const MobileSpan = styled.span`
+  @media screen and (min-width: 750px){
+    display: none;
+  }
+`
+
+const HamburgerButton = styled.button`
+  border: none;
+  background: inherit;
+
+  &:hover{
+    cursor: pointer;
+  }
+`
+
 const Header = ({ scrolled }) => {
   return(
     <StyledHeader scrolled={scrolled}>
@@ -35,7 +56,7 @@ const Header = ({ scrolled }) => {
         Manu Gröbl
       </StyledLink>
 
-      <span>
+      <DesktopSpan>
         <StyledLink
           href="/blog"
         >
@@ -53,7 +74,19 @@ const Header = ({ scrolled }) => {
         >
           Projects
         </StyledLink>
-      </span>
+      </DesktopSpan>
+
+      <MobileSpan>
+
+        <HamburgerButton>
+          <svg viewBox="0 0 80 60" width="28" height="28">
+              <rect width="80" height="8" rx="8" fill="#666"></rect>
+              <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
+              <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
+          </svg>
+        </HamburgerButton>
+
+      </MobileSpan>
       
     </StyledHeader>
   );
