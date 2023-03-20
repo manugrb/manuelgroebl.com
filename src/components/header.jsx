@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react";
 import { Link } from "rebass"
 import styled from "styled-components"
 
@@ -51,10 +52,40 @@ const HamburgerButton = styled.button`
 `
 
 const MobileDropdownWrapper = styled.div`
+  padding-top: 16px;
+  display: ${props => (props.shouldDisplay ? "" : "none")};
+
+  @media screen and (min-width: 750px){
+    display: none;
+  }
+`
+
+const MobileDropdown = styled.ul`
 
 `
 
+const MobileDropdownItem = styled.li`
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  padding-left: 8px;
+
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #333;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+  }
+`
+
 const Header = ({ scrolled }) => {
+
+  const [shouldDisplay, setShouldDisplay] = useState(false);
+
   return(
     <StyledHeader scrolled={scrolled}>
 
@@ -89,7 +120,10 @@ const Header = ({ scrolled }) => {
         <MobileSpan>
 
           <HamburgerButton>
-            <svg viewBox="0 0 80 60" width="28" height="28">
+            <svg viewBox="0 0 80 60" width="28" height="28" onClick={() => {
+            console.log(shouldDisplay);
+            setShouldDisplay(!shouldDisplay);
+          }}>
                 <rect width="80" height="8" rx="8" fill="#666"></rect>
                 <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
                 <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
@@ -100,7 +134,12 @@ const Header = ({ scrolled }) => {
 
       </HeaderPreview>
 
-      <MobileDropdownWrapper></MobileDropdownWrapper>
+      <MobileDropdownWrapper shouldDisplay={shouldDisplay}>
+        <MobileDropdown>
+          <MobileDropdownItem>Hi</MobileDropdownItem>
+          <MobileDropdownItem>Mum</MobileDropdownItem>
+        </MobileDropdown>
+      </MobileDropdownWrapper>
       
     </StyledHeader>
   );
