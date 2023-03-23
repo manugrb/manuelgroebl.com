@@ -71,7 +71,6 @@ const MobileDropdownItem = styled.li`
   margin: 0;
   font-size: 18px;
   color: #333;
-  padding-left: 8px;
 
   &:hover{
     cursor: pointer;
@@ -136,8 +135,31 @@ const Header = ({ scrolled }) => {
 
       <MobileDropdownWrapper shouldDisplay={shouldDisplay}>
         <MobileDropdown>
-          <MobileDropdownItem>Hi</MobileDropdownItem>
-          <MobileDropdownItem>Mum</MobileDropdownItem>
+
+          <MobileDropdownItem>
+            <StyledLink
+              href="/blog"
+            >
+              Blog
+            </StyledLink>
+          </MobileDropdownItem>
+
+          <MobileDropdownItem>
+            <StyledLink
+              href="/about"
+            >
+              About
+            </StyledLink>
+          </MobileDropdownItem>
+
+          <MobileDropdownItem>
+            <StyledLink
+              href="/projects"
+            >
+              Projects
+            </StyledLink>
+          </MobileDropdownItem>
+          
         </MobileDropdown>
       </MobileDropdownWrapper>
       
