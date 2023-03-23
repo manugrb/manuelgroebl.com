@@ -91,7 +91,7 @@ const Header = ({ scrolled }) => {
       <HeaderPreview>
 
         <StyledLink
-          href="/homepage"
+          href="/"
         >
           Manu Gröbl
         </StyledLink>
