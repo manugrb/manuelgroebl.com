@@ -5,6 +5,7 @@ import BlogpostHomepagePreview from "../../components/blogpostHomepagePreview";
 import BlogPostList from "../../components/BlogPostList";
 import { Box } from "rebass";
 import { graphql, useStaticQuery } from "gatsby";
+import Frame from "../../components/Frame";
 
 const HeadingContainer = styled(Box)`
     display: flex;
@@ -55,22 +56,26 @@ const Blog = () => {
     `);
 
     return (
-        <Layout>
-            <HeadingContainer>
-                <SiteHeading>Blog</SiteHeading>
-            </HeadingContainer>
+        <Frame
+            title={"Blog - Manuel Gröbl - professional full stack developer"}
+        >
+            <Layout>
+                <HeadingContainer>
+                    <SiteHeading>Blog</SiteHeading>
+                </HeadingContainer>
 
-            <IntroductionContainer>
-                <IntroductionParagraph>Some of my thoughts on all kinds of topics like technologies I work with, travelling tips and experiences or some of my opinions on current issues.</IntroductionParagraph>
-            </IntroductionContainer>
+                <IntroductionContainer>
+                    <IntroductionParagraph>Some of my thoughts on all kinds of topics like technologies I work with, travelling tips and experiences or some of my opinions on current issues.</IntroductionParagraph>
+                </IntroductionContainer>
 
-            <BlogPostList>
-                {blogListData.allMdx.nodes.map(({ frontmatter }) => (
-                    <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} href={"/blog" + frontmatter.slug}/>
-                ))}
-            </BlogPostList>
+                <BlogPostList>
+                    {blogListData.allMdx.nodes.map(({ frontmatter }) => (
+                        <BlogpostHomepagePreview title={frontmatter.title} date={frontmatter.date} href={"/blog" + frontmatter.slug}/>
+                    ))}
+                </BlogPostList>
 
-        </Layout>
+            </Layout>
+        </Frame>
     );
 }
  
