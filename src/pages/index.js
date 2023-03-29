@@ -5,6 +5,7 @@ import BlogpostHomepagePreview from "../components/blogpostHomepagePreview";
 import Layout from "../components/layout";
 import Project from "../components/project";
 import BlogPostList from "../components/BlogPostList";
+import Frame from "../components/Frame";
 
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -56,7 +57,10 @@ const HomePage = () => {
     `);
 
     return(
-        
+
+        <Frame
+            title={"Manuel Gröbl - professional full stack developer"}
+        >
             <Layout>
                 <div>
                     <div>
@@ -100,6 +104,8 @@ const HomePage = () => {
                 </div>
 
             </Layout>
+        </Frame>
+
 
     )
 

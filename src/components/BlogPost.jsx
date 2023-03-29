@@ -2,6 +2,7 @@ import * as React from "react"
 import { Box, Link } from "rebass"
 import styled from "styled-components"
 import Layout from "../components/layout"
+import Frame from "./Frame"
 
 const Wrapper = styled(Box)`
     width: 100%;
@@ -64,22 +65,26 @@ const BlogPost = (props) => {
     const {meta, children} = props;
 
     return (
-        <Layout>
-            <Wrapper>
-                <PostContainer>
-                    <BackLink href="/blog">Back to Blog</BackLink>
-                    <HeadingContainer>
-                        <BlogHeading>{meta.title}</BlogHeading>
-                        <BlogDate>Published {meta.releaseDate}</BlogDate>
-                    </HeadingContainer>
+        <Frame
+            title={meta.title + " - Manuel Gröbl"}
+        >
+            <Layout>
+                <Wrapper>
+                    <PostContainer>
+                        <BackLink href="/blog">Back to Blog</BackLink>
+                        <HeadingContainer>
+                            <BlogHeading>{meta.title}</BlogHeading>
+                            <BlogDate>Published {meta.releaseDate}</BlogDate>
+                        </HeadingContainer>
 
-                    <MainTextContainer>
-                        {children}
-                    </MainTextContainer>
+                        <MainTextContainer>
+                            {children}
+                        </MainTextContainer>
 
-                </PostContainer>
-            </Wrapper>
-        </Layout>
+                    </PostContainer>
+                </Wrapper>
+            </Layout>
+        </Frame>
     );
 }
  
