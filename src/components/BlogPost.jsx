@@ -60,6 +60,8 @@ const MainTextContainer = styled(Box)`
     text-justify: inter-word;
 `
 
+const defaultKeywords = "Manuel Groebl, Manuel Grobl, Manuel Gröbl, manugrb, Blog";
+
 const BlogPost = (props) => {
 
     const {meta, children} = props;
@@ -67,6 +69,9 @@ const BlogPost = (props) => {
     return (
         <Frame
             title={meta.title + " - Manuel Gröbl"}
+            description={meta.summary}
+            author={meta.author}
+            keywords={meta.keywords + defaultKeywords}
         >
             <Layout>
                 <Wrapper>
