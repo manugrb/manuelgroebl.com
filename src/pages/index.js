@@ -69,9 +69,9 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <InfoParagraph>I'm a professional full stack developer from germany. I started coding over 3.5 years ago and have been working on multiple comercial projects in the last 2 years.</InfoParagraph>
-                        <InfoParagraph>I really enjoy learning new things, especially new technologies that can help me improve my work. Outside of programming, I'm really intersted in Math and Physics. I love to combine coding with my other interests.</InfoParagraph>
-                        <InfoParagraph>If I'm not coding, I'm likely travelling the world, skiing or hiking around the alps.</InfoParagraph>
+                        <InfoParagraph>I'm a professional full stack developer from germany. I have over 3.5 years of coding experience and have been working on multiple commercial projects in the last 2 years.</InfoParagraph>
+                        <InfoParagraph>I enjoy learning new things, especially new technologies that can help me improve my work. Outside of programming, I'm really interested in Math and Physics. I love to combine coding with my other interests.</InfoParagraph>
+                        <InfoParagraph>If I'm not coding, I'm likely traveling the world, skiing or hiking around the alps.</InfoParagraph>
                     </div>
                 </div>
 
