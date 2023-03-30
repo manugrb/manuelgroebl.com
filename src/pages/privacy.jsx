@@ -52,6 +52,7 @@ const Privacy = () => {
     return (
         <Frame
             title={"Privacy - Manuel Gröbl - professional full stack developer"}
+            description={"My Privacy Statement - Privacy is very important to me"}
         >
             <Layout>
                 <HeaderContainer>

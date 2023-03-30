@@ -51,6 +51,7 @@ const About = () => {
 
         <Frame
             title={"Projects - Manuel Gröbl - professional full stack developer"}
+            description={"A List of selected projects, I worked on with some descriptions for a better understanding"}
         >
             <Layout>
 

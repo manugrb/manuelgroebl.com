@@ -60,6 +60,7 @@ const HomePage = () => {
 
         <Frame
             title={"Manuel Gröbl - professional full stack developer"}
+            description={"Professional full stack web developer with over 3.5 years of experience. Specializes in Javascript and Backend."}
         >
             <Layout>
                 <div>
