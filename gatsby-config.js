@@ -12,6 +12,7 @@ module.exports = {
     title: `Manuel Groebl's personal website`,
     description: `The personal website of Manuel Groebl, where you can see some interesting information about him, read up on the projects he has done and check out his blog posts.`,
     author: `@manugrb`,
+    keywords: "Manuel Groebl, Manuel Grobl, Manuel Gröbl, manugrb, full-stack, developer, javascript, web, backend",
     siteUrl: `https://manuelgroebl.com`,
   },
   plugins: [
