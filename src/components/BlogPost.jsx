@@ -3,6 +3,7 @@ import { Box, Link } from "rebass"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Frame from "./Frame"
+import Seo from "./seo"
 
 const Wrapper = styled(Box)`
     width: 100%;
@@ -67,29 +68,41 @@ const BlogPost = (props) => {
     const {meta, children} = props;
 
     return (
-        <Frame
-            title={meta.title + " - Manuel Gröbl"}
-            description={meta.summary}
-            author={meta.author}
-            keywords={meta.keywords + defaultKeywords}
-        >
-            <Layout>
-                <Wrapper>
-                    <PostContainer>
-                        <BackLink href="/blog">Back to Blog</BackLink>
-                        <HeadingContainer>
-                            <BlogHeading>{meta.title}</BlogHeading>
-                            <BlogDate>Published {meta.releaseDate}</BlogDate>
-                        </HeadingContainer>
+        // <Frame
+        //     title={meta.title + " - Manuel Gröbl"}
+        //     description={meta.summary}
+        //     author={meta.author}
+        //     keywords={meta.keywords + defaultKeywords}
+        // >
 
-                        <MainTextContainer>
-                            {children}
-                        </MainTextContainer>
+            <>
 
-                    </PostContainer>
-                </Wrapper>
-            </Layout>
-        </Frame>
+                <Seo
+                    title={meta.title + " - Manuel Gröbl"}
+                    description={meta.summary}
+                    author={meta.author}
+                    keywords={meta.keywords + defaultKeywords}
+                />
+
+                <Layout>
+                    <Wrapper>
+                        <PostContainer>
+                            <BackLink href="/blog">Back to Blog</BackLink>
+                            <HeadingContainer>
+                                <BlogHeading>{meta.title}</BlogHeading>
+                                <BlogDate>Published {meta.releaseDate}</BlogDate>
+                            </HeadingContainer>
+
+                            <MainTextContainer>
+                                {children}
+                            </MainTextContainer>
+
+                        </PostContainer>
+                    </Wrapper>
+                </Layout>
+            </>
+
+        // </Frame>
     );
 }
  
