@@ -34,6 +34,7 @@ function Seo({ description, title, author, keywords, children }) {
       <meta name="description" content={metaDescription} />
       <meta name="author" content={metaAuthor} />
       <meta name="keywords" content={metaKeywords} /> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
