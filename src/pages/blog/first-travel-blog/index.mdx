@@ -6,6 +6,7 @@ summary: "In this post you will learn some interesting information about Jakarta
 ---
 
 import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
 
 export const meta = {
     releaseDate: "2023-03-08",
@@ -69,3 +70,9 @@ export const meta = {
     I've heard different opinions on Jakarta. Some say you definitely need to go, others say they hated it. Personally I have to say that I quite enjoyed Jakarta. For me the city has a really pleasant atmosphere and gives a nice insight to the local culture. There are loads of interesting people and many cool things to do. However I am glad that I did not spend more time here. The city does have a lot to offer, but there is so much more to see in Southeast Asia, that you really should not spend to much time here. It is definitely worth visiting though.
 
 </BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)

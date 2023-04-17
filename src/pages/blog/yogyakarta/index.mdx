@@ -6,6 +6,7 @@ summary: "In this post, you will learn some interesting facts about Yogyakarta -
 ---
 
 import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
 
 export const meta = {
     releaseDate: "2023-03-28",
@@ -70,3 +71,9 @@ export const meta = {
     Yogyakarta is a great place for tourists. No matter what you are interested in, Jogja will have you covered. Also since there are many other tourists, you will never have to do anything on your own. I especially recommend exploring the nature around the city, however you should keep at least one day of your schedule reserved for exploring the city. The city itself is not super interesting but the surroundings are. Plan in as many days as you would like here, I promise it will not get boring.
 
 </BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)

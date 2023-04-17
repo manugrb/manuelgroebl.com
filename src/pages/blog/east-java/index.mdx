@@ -6,6 +6,7 @@ summary: "If you trust the advice you get from most traveling websites and youtu
 ---
 
 import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
 
 export const meta = {
     releaseDate: "2023-04-05",
@@ -94,3 +95,9 @@ export const meta = {
 
 
 </BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)

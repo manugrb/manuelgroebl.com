@@ -6,6 +6,7 @@ summary: "In this post I will tell you some interesting facts about Bandung - th
 ---
 
 import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
 
 export const meta = {
     releaseDate: "2023-03-24",
@@ -58,3 +59,9 @@ export const meta = {
     Bandung does not seem to be a very popular destination for backpackers or international tourists in general. I honestly can't understand why though. The city itself is indeed nothing special if you are not interested in shopping (except the street food markets, since they are one of the best I have ever seen). The nature around the city, however is incredible and pretty unique (I haven't seen anything similar anywhere else on Java). You can definitely plan in a few nights in Bandung just to explore the surroundings. You need to be comfortable riding a scooter though, since you will have to use one to get around and the traffic is terrible.
  
 </BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)

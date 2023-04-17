@@ -6,6 +6,7 @@ summary: "This post is going to be about Kuala Lumpur - Malaysia's Capital and a
 ---
 
 import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
 
 export const meta = {
     releaseDate: "2023-04-11",
@@ -101,3 +102,9 @@ export const meta = {
     3. See https://web.archive.org/web/20170812101441/http://www.cnn.com/travel/article/worlds-best-shopping-cities/index.html
 
 </BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)

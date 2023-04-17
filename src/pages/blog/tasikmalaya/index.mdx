@@ -6,6 +6,7 @@ summary: "In this post you will learns some interesting information about Tasikm
 ---
 
 import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
 
 export const meta = {
     releaseDate: "2023-03-26",
@@ -68,3 +69,9 @@ export const meta = {
     For me, my stay in Tasikmalaya was one of the best on my trip so far. It was also one where I learned and saw a lot. However, I was really lucky and don't know if every visitor will have such a nice experience. There are no other tourists to do stuff with and you have to rely on hospitality of the locals (which worked for me). I would definitely recommend going to Tasikmalaya but not for too long and ideally also don't set your expectations too high, that way you will feel happier, when everything does work out.
 
 </BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)
