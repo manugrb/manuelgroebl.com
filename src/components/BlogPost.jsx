@@ -7,6 +7,7 @@ import Seo from "./seo"
 
 const Wrapper = styled(Box)`
     width: 100%;
+    max-width: 80vw;
     display: flex;
     justify-content: center;
 `
