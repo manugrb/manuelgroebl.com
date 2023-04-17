@@ -61,7 +61,6 @@ const MainTextContainer = styled(Box)`
     text-justify: inter-word;
 `
 
-const defaultKeywords = "Manuel Groebl, Manuel Grobl, Manuel Gröbl, manugrb, Blog";
 
 const BlogPost = (props) => {
 
@@ -75,32 +74,23 @@ const BlogPost = (props) => {
         //     keywords={meta.keywords + defaultKeywords}
         // >
 
-            <>
 
-                <Seo
-                    title={meta.title + " - Manuel Gröbl"}
-                    description={meta.summary}
-                    author={meta.author}
-                    keywords={meta.keywords + defaultKeywords}
-                />
+        <Layout>
+            <Wrapper>
+                <PostContainer>
+                    <BackLink href="/blog">Back to Blog</BackLink>
+                    <HeadingContainer>
+                        <BlogHeading>{meta.title}</BlogHeading>
+                        <BlogDate>Published {meta.releaseDate}</BlogDate>
+                    </HeadingContainer>
 
-                <Layout>
-                    <Wrapper>
-                        <PostContainer>
-                            <BackLink href="/blog">Back to Blog</BackLink>
-                            <HeadingContainer>
-                                <BlogHeading>{meta.title}</BlogHeading>
-                                <BlogDate>Published {meta.releaseDate}</BlogDate>
-                            </HeadingContainer>
+                    <MainTextContainer>
+                        {children}
+                    </MainTextContainer>
 
-                            <MainTextContainer>
-                                {children}
-                            </MainTextContainer>
-
-                        </PostContainer>
-                    </Wrapper>
-                </Layout>
-            </>
+                </PostContainer>
+            </Wrapper>
+        </Layout>
 
         // </Frame>
     );
