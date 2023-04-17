@@ -29,8 +29,7 @@ const InfoParagraph = styled.p`
 const ProjectsDiv = styled.div`
     display: flex;
     flex-flow: row wrap;
-    width: 100vw;
-    margin-left: calc(50% - 100vw / 2);
+    width: 100%;
     align-items: center;
     justify-content: center;
 
