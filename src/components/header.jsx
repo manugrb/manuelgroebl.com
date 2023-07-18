@@ -35,12 +35,14 @@ const DesktopSpan = styled.span`
   @media screen and (max-width: 750px){
     display: none;
   }
+  display: flex;
 `
 
 const MobileSpan = styled.span`
   @media screen and (min-width: 750px){
     display: none;
   }
+  display: flex;
 `
 
 const HamburgerButton = styled.button`
@@ -97,10 +99,9 @@ const Header = ({ scrolled }) => {
           Manu Gröbl
         </StyledLink>
 
+        <ThemeProvider />
         <DesktopSpan>
-
-          <ThemeProvider />
-
+          
           <StyledLink
             href="/blog"
           >
