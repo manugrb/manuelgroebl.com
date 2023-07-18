@@ -16,7 +16,7 @@ const HeadingContainer = styled(Box)`
 const SiteHeading = styled.h1`
     width: fit-content;
     font-size: 32px;
-    color: #000;
+    color: var(--textHighlight);
     text-decoration: none;
     line-height: 1;
     margin: 0;
@@ -31,7 +31,7 @@ const IntroductionContainer = styled(Box)`
 `
 
 const IntroductionParagraph = styled.p`
-    color: #444;
+    color: var(--textNormal);
     font-size: 18px;
     line-height: 1.5;
     max-width: 100%;
