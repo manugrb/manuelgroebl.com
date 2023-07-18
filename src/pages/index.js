@@ -66,7 +66,6 @@ const HomePage = () => {
             <div>
                 <div>
                     <BaseHeader>Hi, I'm Manuel! 👋</BaseHeader>
-                    <DarkModeToggle />
                 </div>
 
                 <div>
