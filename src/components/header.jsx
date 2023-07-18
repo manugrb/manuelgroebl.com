@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState } from "react";
 import { Link } from "rebass"
 import styled from "styled-components"
+import ThemeProvider from "./ThemeProvider";
 
 const StyledHeader = styled.header`
   margin: 0 auto;
@@ -97,6 +98,9 @@ const Header = ({ scrolled }) => {
         </StyledLink>
 
         <DesktopSpan>
+
+          <ThemeProvider />
+
           <StyledLink
             href="/blog"
           >

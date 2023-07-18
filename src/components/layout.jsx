@@ -14,12 +14,6 @@ import { Box, Link } from "rebass"
 import styled from "styled-components"
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #f6f7f8;
-  }
-`
-
 const LayoutWrapper = styled(Box)`
   min-height: 100vh;
   display: grid;
@@ -63,34 +57,29 @@ const FooterLink = styled(Link)`
 const Layout = ({ children }) => {
 
   return (
-    <>
-
-      <GlobalStyle />
-
-      <LayoutWrapper>
-        <Header scrolled={false} /> {/* TODO: implement some scroll detection here... */}
-        <div
-          style={{
-            margin: `0 auto`,
-            width: `var(--size-content)`,
-            maxWidth: `100vw`,
-            padding: `var(--size-gutter)`,
-          }}
-        >
-          <main>{children}</main>
-        </div>
-        <StyledFooter>
-          <FooterTextBox>
-            © {new Date().getFullYear()} &middot; Manuel Gröbl
-          </FooterTextBox>
-          <FooterMiddleSpacer/>
-          <FooterLinkBox>
-            <FooterLink href="/privacy">Privacy</FooterLink>
-            <FooterLink href="https://github.com/manugrb/manuelgroebl.com">View source on GitHub</FooterLink>
-          </FooterLinkBox>
-        </StyledFooter>
-      </LayoutWrapper>
-    </>
+    <LayoutWrapper>
+      <Header scrolled={false} /> {/* TODO: implement some scroll detection here... */}
+      <div
+        style={{
+          margin: `0 auto`,
+          width: `var(--size-content)`,
+          maxWidth: `100vw`,
+          padding: `var(--size-gutter)`,
+        }}
+      >
+        <main>{children}</main>
+      </div>
+      <StyledFooter>
+        <FooterTextBox>
+          © {new Date().getFullYear()} &middot; Manuel Gröbl
+        </FooterTextBox>
+        <FooterMiddleSpacer/>
+        <FooterLinkBox>
+          <FooterLink href="/privacy">Privacy</FooterLink>
+          <FooterLink href="https://github.com/manugrb/manuelgroebl.com">View source on GitHub</FooterLink>
+        </FooterLinkBox>
+      </StyledFooter>
+    </LayoutWrapper>
   )
 }
 
