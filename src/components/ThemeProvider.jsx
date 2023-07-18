@@ -3,19 +3,15 @@ import { useState } from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import { GlobalStyles } from "./GlobalStyles";
 
-
-
 const lightTheme = {
-    body: '#FFF',
-    text: '#363537',
-    toggleBorder: '#FFF',
-    background: '#363537',
+    body: '#f6f7f8',
+    textHighlight: '#222222',
+    textNormal: '#444444'
 }
 const darkTheme = {
-    body: '#363537',
-    text: '#FAFAFA',
-    toggleBorder: '#6B8096',
-    background: '#999',
+    body: '#121212',
+    textHighlight: '#ffffff',
+    textNormal: '#e6e6e6'
 }
 
 const ThemeProvider = () => {
