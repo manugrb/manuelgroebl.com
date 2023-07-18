@@ -26,10 +26,6 @@ const ThemeProvider = () => {
 
     const prefersDark = localStorage.getItem('theme') ? localStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    console.log(prefersDark);
-    console.log(localStorage.getItem('theme'));
-    console.log(typeof localStorage.getItem('theme'));
-    console.log(!!localStorage.getItem('theme'));    console.log( window.matchMedia('(prefers-color-scheme: dark)').matches);
     const [isDarkTheme, setIsDarkTheme] = useState(prefersDark);
 
     const setThemeFunction = (darkTheme) => {
