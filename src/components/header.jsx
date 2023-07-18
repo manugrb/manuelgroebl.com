@@ -21,7 +21,7 @@ const HeaderPreview = styled.div`
 `
 
 const StyledLink = styled(Link)`
-  color: #666;
+  color: var(--textNormal);
   font-size: 24px;
   padding: 0 2rem;
   text-decoration: none;

@@ -12,7 +12,7 @@ import Seo from "../components/seo";
 import DarkModeToggle from "../components/DarkModeToggle";
 
 const BaseHeader = styled.h1`
-    color: #222;
+    color: var(--textHighlight);
     width: 100%;
     text-align: center;
     padding-top: 1rem;
@@ -21,7 +21,7 @@ const BaseHeader = styled.h1`
 `
 
 const InfoParagraph = styled.p`
-    color: #444;
+    color: var(--textNormal);
     font-size: 18px;
     line-height: 1.5;
     max-width: none;
