@@ -8,6 +8,7 @@ const lightTheme = {
     textHighlight: '#222222',
     textNormal: '#444444',
     textUnimportant: '#888888',
+    separatorColor: 'rgba(0,0,0,0.1)',
     shadowColor: '#dddddd',
     footerColor: '#ffffff'
 }
@@ -16,6 +17,7 @@ const darkTheme = {
     textHighlight: '#ffffff',
     textNormal: '#e6e6e6',
     textUnimportant: '#a7a7a7',
+    separatorColor: 'rgba(255,255,255,0.1)',
     shadowColor: '#060606',
     footerColor: '#191919'
 }

@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   padding: var(--space-4) var(--size-gutter);
   background: ${props => (props.scrolled ? '#fff' : 'inherit')};;
   position: ${props => (props.scrolled ? 'fixed' : 'relative')};
-  border-bottom: ${props => (props.scrolled ? '1px solid rgba(0, 0, 0, 0.1)' : 'none')};
+  border-bottom: ${props => (props.scrolled ? '1px solid var(--separatorColor)' : 'none')};
   width: 100%;
 `
 

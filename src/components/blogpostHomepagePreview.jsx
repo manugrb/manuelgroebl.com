@@ -13,7 +13,7 @@ const ContainerBox = styled(Box)`
     border-radius: 0px;
     border: solid;
     border-width: 0 0 2px 0;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: var(--separatorColor);
 
     &:hover{
         cursor: pointer;

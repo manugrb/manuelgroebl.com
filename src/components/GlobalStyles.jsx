@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         --textHighlight: ${({ theme }) => theme.textHighlight};
         --textNormal: ${({ theme }) => theme.textNormal};
         --textUnimportant: ${({ theme }) => theme.textUnimportant};
+        --separatorColor: ${({ theme }) => theme.separatorColor};
         --shadowColor: ${({ theme }) => theme.shadowColor};
         --footerColor: ${({ theme }) => theme.footerColor};
     }
