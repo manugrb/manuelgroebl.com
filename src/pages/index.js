@@ -9,6 +9,7 @@ import Frame from "../components/Frame";
 
 import { graphql, useStaticQuery } from "gatsby";
 import Seo from "../components/seo";
+import DarkModeToggle from "../components/DarkModeToggle";
 
 const BaseHeader = styled.h1`
     color: #222;
@@ -65,6 +66,7 @@ const HomePage = () => {
             <div>
                 <div>
                     <BaseHeader>Hi, I'm Manuel! 👋</BaseHeader>
+                    <DarkModeToggle />
                 </div>
 
                 <div>
