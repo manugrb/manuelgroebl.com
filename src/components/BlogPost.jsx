@@ -27,6 +27,7 @@ const HeadingContainer = styled(Box)`
 
 const BlogHeading = styled.h2`
     font-size: 32px;
+    color: var(--textHighlight);
     line-height: 1;
     margin: 0px;
 `
@@ -58,6 +59,7 @@ const BackLink = styled(Link)`
 `
 
 const MainTextContainer = styled(Box)`
+    color: var(--textNormal);
     text-align: justify;
     text-justify: inter-word;
 `
