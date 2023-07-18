@@ -17,7 +17,7 @@ const ContainerBox = styled(Box)`
     border-radius: 6px;
 
     &:hover{
-        box-shadow: 4px 4px 12px 4px #ddd;
+        box-shadow: 4px 4px 12px 4px var(--shadowColor);
         cursor: pointer;
     }
 

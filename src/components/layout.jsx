@@ -21,7 +21,7 @@ const LayoutWrapper = styled(Box)`
 `
 
 const StyledFooter = styled.footer`
-  background: #fff;
+  background: var(--footerColor);
   margin-top: var(--space-5);
   font-size: var(--font-sm);
   padding-top: 64px;
@@ -34,6 +34,7 @@ const StyledFooter = styled.footer`
 const FooterTextBox = styled(Box)`
   display: grid;
   font-size: 16px;
+  color: var(--textNormal);
 `
 
 const FooterMiddleSpacer = styled(Box)`
@@ -47,7 +48,7 @@ const FooterLinkBox = styled(Box)`
 
 const FooterLink = styled(Link)`
   text-decoration: none;
-  color: #444;
+  color: var(--textNormal);
 
   &:hover{
     text-decoration: underline;

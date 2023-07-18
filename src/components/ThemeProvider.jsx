@@ -6,12 +6,18 @@ import { GlobalStyles } from "./GlobalStyles";
 const lightTheme = {
     body: '#f6f7f8',
     textHighlight: '#222222',
-    textNormal: '#444444'
+    textNormal: '#444444',
+    textUnimportant: '#888888',
+    shadowColor: '#dddddd',
+    footerColor: '#ffffff'
 }
 const darkTheme = {
     body: '#121212',
     textHighlight: '#ffffff',
-    textNormal: '#e6e6e6'
+    textNormal: '#e6e6e6',
+    textUnimportant: '#a7a7a7',
+    shadowColor: '#060606',
+    footerColor: '#191919'
 }
 
 const ThemeProvider = () => {
