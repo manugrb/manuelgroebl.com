@@ -29,13 +29,13 @@ const ToggleContainer = styled.div`
 
 const ThemeProvider = () => {
 
-    const prefersDark = localStorage.getItem('theme') ? localStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = window.sessionStorage.getItem('theme') ? window.sessionStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     const [isDarkTheme, setIsDarkTheme] = useState(prefersDark);
 
     const setThemeFunction = (darkTheme) => {
 
-        localStorage.setItem('theme', darkTheme);
+        window.sessionStorage.setItem('theme', darkTheme);
         setIsDarkTheme(darkTheme);
 
     }
