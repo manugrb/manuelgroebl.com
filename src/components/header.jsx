@@ -2,13 +2,14 @@ import * as React from "react"
 import { useState } from "react";
 import { Link } from "rebass"
 import styled from "styled-components"
+import ThemeProvider from "./ThemeProvider";
 
 const StyledHeader = styled.header`
   margin: 0 auto;
   padding: var(--space-4) var(--size-gutter);
   background: ${props => (props.scrolled ? '#fff' : 'inherit')};;
   position: ${props => (props.scrolled ? 'fixed' : 'relative')};
-  border-bottom: ${props => (props.scrolled ? '1px solid rgba(0, 0, 0, 0.1)' : 'none')};
+  border-bottom: ${props => (props.scrolled ? '1px solid var(--separatorColor)' : 'none')};
   width: 100%;
 `
 
@@ -20,7 +21,7 @@ const HeaderPreview = styled.div`
 `
 
 const StyledLink = styled(Link)`
-  color: #666;
+  color: var(--textNormal);
   font-size: 24px;
   padding: 0 2rem;
   text-decoration: none;
@@ -30,16 +31,22 @@ const StyledLink = styled(Link)`
   }
 `
 
+const RightSideDiv = styled.div`
+  display: inline-flex;
+`
+
 const DesktopSpan = styled.span`
   @media screen and (max-width: 750px){
     display: none;
   }
+  display: flex;
 `
 
 const MobileSpan = styled.span`
   @media screen and (min-width: 750px){
     display: none;
   }
+  display: flex;
 `
 
 const HamburgerButton = styled.button`
@@ -96,40 +103,44 @@ const Header = ({ scrolled }) => {
           Manu Gröbl
         </StyledLink>
 
-        <DesktopSpan>
-          <StyledLink
-            href="/blog"
-          >
-            Blog
-          </StyledLink>
+        <RightSideDiv>
+          <ThemeProvider />
+          <DesktopSpan>
+            
+            <StyledLink
+              href="/blog"
+            >
+              Blog
+            </StyledLink>
 
-          <StyledLink
-            href="/about"
-          >
-            About
-          </StyledLink>
+            <StyledLink
+              href="/about"
+            >
+              About
+            </StyledLink>
 
-          <StyledLink
-            href="/projects"
-          >
-            Projects
-          </StyledLink>
-        </DesktopSpan>
+            <StyledLink
+              href="/projects"
+            >
+              Projects
+            </StyledLink>
+          </DesktopSpan>
 
-        <MobileSpan>
+          <MobileSpan>
 
-          <HamburgerButton>
-            <svg viewBox="0 0 80 60" width="28" height="28" onClick={() => {
-            console.log(shouldDisplay);
-            setShouldDisplay(!shouldDisplay);
-          }}>
-                <rect width="80" height="8" rx="8" fill="#666"></rect>
-                <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
-                <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
-            </svg>
-          </HamburgerButton>
+            <HamburgerButton>
+              <svg viewBox="0 0 80 60" width="28" height="28" onClick={() => {
+              console.log(shouldDisplay);
+              setShouldDisplay(!shouldDisplay);
+            }}>
+                  <rect width="80" height="8" rx="8" fill="#666"></rect>
+                  <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
+                  <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
+              </svg>
+            </HamburgerButton>
 
-        </MobileSpan>
+          </MobileSpan>
+        </RightSideDiv>
 
       </HeaderPreview>
 

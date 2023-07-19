@@ -13,7 +13,7 @@ const ContainerBox = styled(Box)`
     border-radius: 0px;
     border: solid;
     border-width: 0 0 2px 0;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: var(--separatorColor);
 
     &:hover{
         cursor: pointer;
@@ -28,7 +28,7 @@ const TitleLink = styled.h3`
     font-size: 24px;
     font-weight: 700;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #000;
+    color: var(--textHighlight);
     text-decoration: none;
     ${ContainerBox}:hover & {
         text-decoration: underline;
@@ -38,7 +38,7 @@ const TitleLink = styled.h3`
 const InfoParagraph = styled.p`
     margin: 0;
     font-size: 16px;
-    color: #888;
+    color: var(--textUnimportant);
     text-decoration: none !important;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `

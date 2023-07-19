@@ -7,7 +7,7 @@ import Frame from "../components/Frame";
 import Seo from "../components/seo";
 
 const BaseHeader = styled.h1`
-    color: #222;
+    color: var(--textHighlight);
     width: 100%;
     text-align: center;
     padding-top: 1rem;
@@ -16,7 +16,7 @@ const BaseHeader = styled.h1`
 `
 
 const SubHeader = styled.h2`
-    color: #333;
+    color: var(--textHighlight);
     text-align: start;
     padding-top: 1rem;
     font-weight: 600;
@@ -24,14 +24,14 @@ const SubHeader = styled.h2`
 `
 
 const SubSubHeader = styled.h3`
-    color: #333;
+    color: var(--textHighlight);
     text-align: start;
     padding-top: 0.5rem;
     margin: 0;
 `
 
 const TextParagraph = styled.p`
-    color: #333;
+    color: var(--textNormal);
     text-align: justify;
     text-justify: inter-word;
 `

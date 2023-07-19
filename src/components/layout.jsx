@@ -14,12 +14,6 @@ import { Box, Link } from "rebass"
 import styled from "styled-components"
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #f6f7f8;
-  }
-`
-
 const LayoutWrapper = styled(Box)`
   min-height: 100vh;
   display: grid;
@@ -27,7 +21,7 @@ const LayoutWrapper = styled(Box)`
 `
 
 const StyledFooter = styled.footer`
-  background: #fff;
+  background: var(--footerColor);
   margin-top: var(--space-5);
   font-size: var(--font-sm);
   padding-top: 64px;
@@ -40,6 +34,7 @@ const StyledFooter = styled.footer`
 const FooterTextBox = styled(Box)`
   display: grid;
   font-size: 16px;
+  color: var(--textNormal);
 `
 
 const FooterMiddleSpacer = styled(Box)`
@@ -53,7 +48,7 @@ const FooterLinkBox = styled(Box)`
 
 const FooterLink = styled(Link)`
   text-decoration: none;
-  color: #444;
+  color: var(--textNormal);
 
   &:hover{
     text-decoration: underline;
@@ -63,34 +58,29 @@ const FooterLink = styled(Link)`
 const Layout = ({ children }) => {
 
   return (
-    <>
-
-      <GlobalStyle />
-
-      <LayoutWrapper>
-        <Header scrolled={false} /> {/* TODO: implement some scroll detection here... */}
-        <div
-          style={{
-            margin: `0 auto`,
-            width: `var(--size-content)`,
-            maxWidth: `100vw`,
-            padding: `var(--size-gutter)`,
-          }}
-        >
-          <main>{children}</main>
-        </div>
-        <StyledFooter>
-          <FooterTextBox>
-            © {new Date().getFullYear()} &middot; Manuel Gröbl
-          </FooterTextBox>
-          <FooterMiddleSpacer/>
-          <FooterLinkBox>
-            <FooterLink href="/privacy">Privacy</FooterLink>
-            <FooterLink href="https://github.com/manugrb/manuelgroebl.com">View source on GitHub</FooterLink>
-          </FooterLinkBox>
-        </StyledFooter>
-      </LayoutWrapper>
-    </>
+    <LayoutWrapper>
+      <Header scrolled={false} /> {/* TODO: implement some scroll detection here... */}
+      <div
+        style={{
+          margin: `0 auto`,
+          width: `var(--size-content)`,
+          maxWidth: `100vw`,
+          padding: `var(--size-gutter)`,
+        }}
+      >
+        <main>{children}</main>
+      </div>
+      <StyledFooter>
+        <FooterTextBox>
+          © {new Date().getFullYear()} &middot; Manuel Gröbl
+        </FooterTextBox>
+        <FooterMiddleSpacer/>
+        <FooterLinkBox>
+          <FooterLink href="/privacy">Privacy</FooterLink>
+          <FooterLink href="https://github.com/manugrb/manuelgroebl.com">View source on GitHub</FooterLink>
+        </FooterLinkBox>
+      </StyledFooter>
+    </LayoutWrapper>
   )
 }
 
