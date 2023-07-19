@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from "react";
+import styled from "styled-components";
 import DarkModeToggle from "./DarkModeToggle";
 import { GlobalStyles } from "./GlobalStyles";
 
@@ -22,6 +23,10 @@ const darkTheme = {
     footerColor: '#191919'
 }
 
+const ToggleContainer = styled.div`
+    padding-top: 6px;
+`
+
 const ThemeProvider = () => {
 
     const prefersDark = localStorage.getItem('theme') ? localStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -36,11 +41,11 @@ const ThemeProvider = () => {
     }
 
     return(
-        <div>
+        <ToggleContainer>
             <GlobalStyles theme={isDarkTheme ? darkTheme : lightTheme} />
 
             <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
-        </div>
+        </ToggleContainer>
     );
     
 

@@ -31,6 +31,10 @@ const StyledLink = styled(Link)`
   }
 `
 
+const RightSideDiv = styled.div`
+  display: inline-flex;
+`
+
 const DesktopSpan = styled.span`
   @media screen and (max-width: 750px){
     display: none;
@@ -99,42 +103,44 @@ const Header = ({ scrolled }) => {
           Manu Gröbl
         </StyledLink>
 
-        <ThemeProvider />
-        <DesktopSpan>
-          
-          <StyledLink
-            href="/blog"
-          >
-            Blog
-          </StyledLink>
+        <RightSideDiv>
+          <ThemeProvider />
+          <DesktopSpan>
+            
+            <StyledLink
+              href="/blog"
+            >
+              Blog
+            </StyledLink>
 
-          <StyledLink
-            href="/about"
-          >
-            About
-          </StyledLink>
+            <StyledLink
+              href="/about"
+            >
+              About
+            </StyledLink>
 
-          <StyledLink
-            href="/projects"
-          >
-            Projects
-          </StyledLink>
-        </DesktopSpan>
+            <StyledLink
+              href="/projects"
+            >
+              Projects
+            </StyledLink>
+          </DesktopSpan>
 
-        <MobileSpan>
+          <MobileSpan>
 
-          <HamburgerButton>
-            <svg viewBox="0 0 80 60" width="28" height="28" onClick={() => {
-            console.log(shouldDisplay);
-            setShouldDisplay(!shouldDisplay);
-          }}>
-                <rect width="80" height="8" rx="8" fill="#666"></rect>
-                <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
-                <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
-            </svg>
-          </HamburgerButton>
+            <HamburgerButton>
+              <svg viewBox="0 0 80 60" width="28" height="28" onClick={() => {
+              console.log(shouldDisplay);
+              setShouldDisplay(!shouldDisplay);
+            }}>
+                  <rect width="80" height="8" rx="8" fill="#666"></rect>
+                  <rect y="24" width="80" height="8" rx="8" fill="#666"></rect>
+                  <rect y="48 " width="80" height="8" rx="8" fill="#666"></rect>
+              </svg>
+            </HamburgerButton>
 
-        </MobileSpan>
+          </MobileSpan>
+        </RightSideDiv>
 
       </HeaderPreview>
 
