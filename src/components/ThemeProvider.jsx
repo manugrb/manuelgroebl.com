@@ -29,8 +29,11 @@ const ToggleContainer = styled.div`
 
 const ThemeProvider = () => {
 
-    const isBrowser = window !== undefined
+    const isBrowser = typeof window !== "undefined";
     console.log(typeof window);
+    console.log(typeof window === undefined);
+    console.log(typeof window === "undefined");
+    console.log(isBrowser);
     console.log(window);
     // const prefersDark = isBrowser ? window.sessionStorage.getItem('theme') ? window.sessionStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches : false;
     const prefersDark = isBrowser ? window.__theme === "dark" : false;
