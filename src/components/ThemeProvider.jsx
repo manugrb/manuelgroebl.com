@@ -44,13 +44,23 @@ const ThemeProvider = () => {
 
     }
 
-    return(
-        <ToggleContainer>
-            <GlobalStyles theme={isDarkTheme ? darkTheme : lightTheme} />
+    if(isBrowser){
 
-            <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
-        </ToggleContainer>
-    );
+        return(
+            <ToggleContainer>
+                <GlobalStyles theme={isDarkTheme ? darkTheme : lightTheme} />
+    
+                <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
+            </ToggleContainer>
+        );
+
+    }else{
+        return(
+            <ToggleContainer>
+                <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
+            </ToggleContainer>
+        )
+    }
     
 
 }
