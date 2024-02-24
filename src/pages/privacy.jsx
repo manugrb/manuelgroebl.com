@@ -83,8 +83,8 @@ const Privacy = () => {
                     <MainTextListItem>The Browser you used to access this website</MainTextListItem>
                     <MainTextListItem>The operating system, you used to access this website</MainTextListItem>
                     <MainTextListItem>Your IP-address</MainTextListItem>
-                    <MainTextContainer>Your Country and Region</MainTextContainer>
-                    <MainTextContainer>The device you are using to access this site</MainTextContainer>
+                    <MainTextListItem>Your Country and Region</MainTextListItem>
+                    <MainTextListItem>The device you are using to access this site</MainTextListItem>
                 </MainTextList>
 
                 <MainTextParagraph>These log files will be deleted after 7 days. They help the website provider to identify and react to attacks on their infrastructure.</MainTextParagraph>
