@@ -44,6 +44,7 @@ function Seo({ description, title, author, keywords, children }) {
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="55f7e2a2-7d15-4c73-964a-4714b067c68f"></script>
       {children}
     </>
   )

@@ -4,6 +4,7 @@ import { Box } from "rebass";
 import Layout from "../components/layout";
 import Frame from "../components/Frame";
 import Seo from "../components/seo";
+import { Link } from "gatsby";
 
 const HeaderContainer = styled(Box)`
     display: flex;
@@ -71,6 +72,19 @@ const Privacy = () => {
                     <MainTextListItem>The Browser you used to access this website</MainTextListItem>
                     <MainTextListItem>The operating system, you used to access this website</MainTextListItem>
                     <MainTextListItem>Your IP-address</MainTextListItem>
+                </MainTextList>
+
+                <MainTextParagraph>I am also using Umami to track the traffic on this website. Umami is an open source analytics tool. You can view the source <Link to="github.com/umami-software/umami">here</Link>. The tracked data is stored on their servers, which are located in europe. Umami tracks the following data:</MainTextParagraph>
+                <MainTextList>
+                    <MainTextListItem>Domain of the visited website</MainTextListItem>
+                    <MainTextListItem>Time of your visit</MainTextListItem>
+                    <MainTextListItem>Amount of sent data</MainTextListItem>
+                    <MainTextListItem>Link from where you klicked on this website</MainTextListItem>
+                    <MainTextListItem>The Browser you used to access this website</MainTextListItem>
+                    <MainTextListItem>The operating system, you used to access this website</MainTextListItem>
+                    <MainTextListItem>Your IP-address</MainTextListItem>
+                    <MainTextContainer>Your Country and Region</MainTextContainer>
+                    <MainTextContainer>The device you are using to access this site</MainTextContainer>
                 </MainTextList>
 
                 <MainTextParagraph>These log files will be deleted after 7 days. They help the website provider to identify and react to attacks on their infrastructure.</MainTextParagraph>
