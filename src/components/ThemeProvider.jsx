@@ -2,7 +2,7 @@ import * as React from "react"
 import { useState } from "react";
 import styled from "styled-components";
 import DarkModeToggle from "./DarkModeToggle";
-import { GlobalStyles } from "./GlobalStyles";
+import "../css/globalStyles.css";
 
 const lightTheme = {
     body: '#f6f7f8',
@@ -37,30 +37,19 @@ const ThemeProvider = () => {
 
     const setThemeFunction = (darkTheme) => {
 
-        if(isBrowser){
+                if(isBrowser){
             window.sessionStorage.setItem('theme', darkTheme);
             setIsDarkTheme(darkTheme);
         }
 
     }
 
-    if(isBrowser){
 
-        return(
-            <ToggleContainer>
-                <GlobalStyles theme={isDarkTheme ? darkTheme : lightTheme} />
-    
-                <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
-            </ToggleContainer>
-        );
-
-    }else{
-        return(
-            <ToggleContainer>
-                <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
-            </ToggleContainer>
-        )
-    }
+    return(
+        <ToggleContainer>
+            <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
+        </ToggleContainer>
+    );
     
 
 }
