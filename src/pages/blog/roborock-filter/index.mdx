@@ -1,0 +1,70 @@
+---
+title: How to Fix Roborock e4 Blocked Filter Notification
+date: 2024-03-19
+slug: /roborock-filter/
+summary: 'How to fix the "The filter is blocked or still wet. The suction will be reduced until the filter is clean and/or dry" notification on your Roborock e4'
+---
+
+import BlogPost from "../../../components/BlogPost";
+import BlogPostSeo from "../../../components/BlogPostSeo";
+
+export const meta = {
+    releaseDate: "2023-05-24",
+    title: 'How to Fix Roborock e4 Blocked Filter Notification',
+    summary: 'How to fix the "The filter is blocked or still wet. The suction will be reduced until the filter is clean and/or dry" notification on your Roborock e4',
+    author: 'Manuel Gröbl',
+    keywords: 'Roborock, Roborock e4, e4, Filter, Filter Blocked, Filter Wet, The filter is blocked or still wet. The suction will be reduced until the filter is clean and/or dry, Blocked, Wet, Clean, Cleaned, Clean Filter, New Filter, Vacuum, Vacuum Cleaner, Repair, Teardown'
+}
+
+<BlogPost 
+    meta={meta}
+>
+
+    The blocked filter notification is (from my experience) a very common occurence with the Roborock e4, as it can have multiple different reasons. In the following guide, I will give you step-to-step instructions on how to fix this error.
+
+    ## Step 1: Diagnosing the source of the error:
+
+    The obvious source of the error is abvously the filer in the dust tank of your vacuum. Make sure it is clean and dry. If you have been using your filter for an extended period of time, you might need to swap it out for a new one.
+    
+    If your filter is clean and dry and you are it is not causing the problem, the fix might get a bit more tedious, since we are going to have to disassemble (almost) the whole thing.
+    
+    ## Step 2: Disassembly
+    
+    In order to disassemble (and later reassemble) the vacuum, I can recommend watching henrikcsuri's [Teardown Video](https://www.youtube.com/watch?v=NRMr4dp6LU8) on YouTube. Follow his instructions until minute 2:40.
+    
+    Now you should be able to access the motor (the big white circular thing in the back). It should look someting like this:
+    
+    ![Disassembled Roborock e4](/static/blog/roborock-filter/disassembled_vacuum.jpg)
+
+    The motor is held in place by a white plastic bracket, which is screwed in on either side of the motor. Remove both of these screws and carefully remove the motor from the vacuum.
+
+    ## Step 3: Cleaning the motor filter
+
+    Turn the motor around and you should see the corupus delicti. The inlet of the motor has a small grid, which keeps out all of the dust that passed through the first filter. After some time, this grid will be dirty enough to disrupt the airflow and cause the problem you are having. It might look something like this:
+
+    ![Dirty motor filter Roborock e4](/static/blog/roborock-filter/dirty_filter.jpg)
+
+    Now just remove as much of the dust as you can. Make sure that no dust falls into the motor, since this can damage it.
+
+    While you're at it, you can also check if something blocks the chambers, that you normaly would not be able to access.
+
+    Once your filter is clean again, put the motor back in place and make sure, that the exhaust is properly connected to the silicone exhaust tube on the case of the vacuum.
+
+    ## Step 4: Reassembly
+
+    In order to reassemble your Vacuum, just do all steps you did to disassemble it in reverse. The disassembly video also helps in this process. Make sure you don't forget to put parts back in and that everything is properly connected.
+
+    ## Step 5: Check if it works
+
+    Once you have made sure, that you put all parts back in, you can try if cleaning the filter solved the problem. The vacuum should now clean properly without reducing power.
+
+    Congratulations on saving money and doing the environment a favor by reducing waste and production of new things.
+    If you have anything to add or improve on this guide, feel free to let me know about it here: [contact@manuelgroebl.com](mailto:contact@manuelgroebl.com)
+
+</BlogPost>
+
+export const Head = () => (
+    <BlogPostSeo 
+        meta={meta}
+    />
+)
