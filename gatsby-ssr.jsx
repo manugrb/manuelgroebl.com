@@ -9,10 +9,21 @@ exports.onRenderBody = ({
         dangerouslySetInnerHTML={{
             __html: `
             (function() {
-              window.__theme = (window.sessionStorage.getItem('theme') ? window.sessionStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches) ? "dark" : "light";
-              console.log(window.__theme);
-              console.log(window.sessionStorage.getItem('theme') + "window.sessionStorage.getItem('theme')");
-              console.log(window.matchMedia('(prefers-color-scheme: dark)').matches + "window.matchMedia('(prefers-color-scheme: dark)').matches");
+              setTheme((window.sessionStorage.getItem('theme') ? window.sessionStorage.getItem('theme') === "true" : window.matchMedia('(prefers-color-scheme: dark)').matches) ? "dark" : "light");
+              function setTheme(theme){
+                window.__theme = theme;
+                if(window.__theme === "dark"){
+                  document.documentElement.className = 'dark';
+                }else{
+                  document.documentElement.className = '';
+                }
+              }
+              window.__setPreferredTheme = function(theme) {
+                setTheme(theme);
+                try {
+                  window.sessionStorage.setItem('preferred-theme', theme);
+                } catch (e) {}
+              };
             })();`
           }
         }
