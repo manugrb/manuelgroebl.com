@@ -26,7 +26,7 @@ const ThemeProvider = () => {
 
     return(
         <ToggleContainer>
-            <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />
+            {isBrowser && <DarkModeToggle isToggled={isDarkTheme} toggleFunction={setThemeFunction} />}
         </ToggleContainer>
     );
     
