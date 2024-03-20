@@ -78,6 +78,7 @@ const Layout = ({ children }) => {
         <FooterLinkBox>
           <FooterLink href="/privacy">Privacy</FooterLink>
           <FooterLink href="https://github.com/manugrb/manuelgroebl.com">View source on GitHub</FooterLink>
+          <FooterLink href="mailto:contact@manuelgroebl.com">Contact</FooterLink>
         </FooterLinkBox>
       </StyledFooter>
     </LayoutWrapper>
